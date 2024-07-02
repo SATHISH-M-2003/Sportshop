@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Sports Shop</title>
+<style>
+  body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eceaff;
+        }
+
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        
+   .user-pic{
+     width: 40px;
+    border-radius: 50%;
+    cursor:pointer;
+    margin-left:30px;
+         }
+   section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-container button:hover {
+            background-color: #45a049;
+        }
+        
+
+.slider-wrapper{
+    position:relative;
+    max-width:48rem;
+    margin:0 auto;
+ }
+ .slider{
+    display:flex;
+    aspect-ratio: 16/9;
+    flex-direction: row;
+    background-color: #333;
+    overflow-x:hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+ }
+ .slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+ }
+ .slider-nav{
+    display:flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom:1.25rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index: 1;
+ }
+ .slider-nav a{
+        height: 0.5rem;
+        width:0.5rem;
+        border-radius:50%;
+        background-color: white;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+ }
+ .slider-nav a:hover
+ {
+    opacity: 100%;
+ }
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Sports Shop</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+<img src="C:\Users\sathi\Music\project\user-icon-on-transparent-background-free-png.png" class="user-pic">
+  
+ </nav>
+    <section>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" name="q" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <h2>Welcome to our  Sports Shop!</h2>
+        
+    </section>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1"src="C:\Users\sathi\Music\project\8687b95c2e4f8cbe039810eb6e30fae2.png"/>
+                <img id="slide-2"src="C:\Users\sathi\Music\project\t-shirt-offer-ads-design-template-4c94b96d6d741dca6db3e1624b595511_screen.jpg"/>
+                <img id="slide-3"src="C:\Users\sathi\Music\project\advertising-logo-nike-poster-wallpaper-preview.jpg"/>
+                <img id="slide-4"src="C:\Users\sathi\Music\project\jersey-mock-ups-design-template-0ab5be58f7048792a455b3d2da796e56_screen.jpg"/>
+               
+                
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                
+               
+            </div>
+        </div>
+    </section>
+
+
+
+<p>GOOD QUALITY</p>
+
+
+    <footer>
+
+<form action="C:\Users\sathi\Music\project\order.html">
+        <button type="submit">Product</button>
+ </form>
+       
+
+       
+    </footer>
+
+</body>
+</html>

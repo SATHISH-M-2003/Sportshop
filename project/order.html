@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Shopping Cart</title>
+    
+
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap:10px;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+}
+
+.cart {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-items li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#clear-cart {
+    background-color: #f44336;
+}
+
+#clear-cart:hover {
+    background-color: #d32f2f;
+}
+#clear-cart1 {
+    background-color: blue;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1> PRODUCTS </h1>
+        <div class="products">
+            <div class="product">
+                <img src="C:\Users\sathi\Music\project\ca3481c2f261a89008e803316505d74c.png_750x750.jpg_.webp" alt="Product 1">
+                <p>JERSEY - $10</p>
+                <button class="add-to-cart" data-price="10">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="C:\Users\sathi\Music\project\ab4039a33ceb276ddebd490bfc1da439.jpg" alt="Product 2">
+                <p> BAT- $15</p>
+                <button class="add-to-cart" data-price="15">Add to Cart</button>
+            </div>
+
+
+
+
+<div class="product">
+                <img src="C:\Users\sathi\Music\project\close-up-of-cricket-batting-gloves.jpg" alt="Product 3">
+                <p> CRICKET GLOVES - $20</p>
+                <button class="add-to-cart" data-price="15">Add to Cart</button>
+            </div>
+<div class="product">
+                <img src="C:\Users\sathi\Music\project\wallpaper2you_270503.jpg" alt="Product 4">
+                <p> BALL - $25</p>
+                <button class="add-to-cart" data-price="15">Add to Cart</button>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Add more products as needed -->
+        </div>
+        <div class="cart">
+            <h2>MY Cart</h2>
+            <ul class="cart-items">
+                <!-- Cart items will be added dynamically -->
+            </ul>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button id="clear-cart">Clear Cart</button>
+            <form action="C:\Users\sathi\Music\project\successful.html">
+<button id="clear-cart1">Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItemsList = document.querySelector('.cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const clearCartButton = document.getElementById('clear-cart');
+    let totalPrice = 0;
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productPrice = parseFloat(button.getAttribute('data-price'));
+            totalPrice += productPrice;
+            cartTotal.textContent = totalPrice.toFixed(2);
+
+            const li = document.createElement('li');
+            li.textContent = `Product - $${productPrice.toFixed(2)}`;
+            cartItemsList.appendChild(li);
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('remove-from-cart');
+            li.appendChild(removeButton);
+
+            removeButton.addEventListener('click', function() {
+                totalPrice -= productPrice;
+                cartTotal.textContent = totalPrice.toFixed(2);
+                li.remove();
+            });
+        });
+    });
+
+    clearCartButton.addEventListener('click', function() {
+        cartItemsList.innerHTML = '';
+        totalPrice = 0;
+        cartTotal.textContent = totalPrice.toFixed(2);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
